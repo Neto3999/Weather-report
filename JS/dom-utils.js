@@ -10,6 +10,7 @@ const updateCity = async (city) => {
 };
 
 cityForm.addEventListener('submit', e => {
+  
 //Prevent default action
   e.preventDefault();
 
