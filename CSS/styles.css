@@ -19,7 +19,7 @@ header {
   flex-direction: column;
 }
 
-#weather_summary {
+#day_forecast {
   border: 1px solid gray;
   height: 60vh;
   width: 30%;
