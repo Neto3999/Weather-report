@@ -8,29 +8,30 @@ const apiData = (data) => {
 
     const { cityDetails, weather } = data;
 
+//Weather icon
+const iconSrc = `SamplePng/${weather.WeatherIcon}.png`;
+icon.setAttribute('src', iconSrc);
+
 //Rewritten and updated HTML
 weatherSummary.innerHTML = `
 <h1 id="city_heading">${cityDetails.EnglishName}</h1>
-<div class="forecastContainer">
-    <div id="temperature">${weather.Temperature.Imperial.Value + '°F'}</div>
-    <p id="forecast_headline">${weather.WeatherText}</p>
-</div>
-<div class="currentConditions">
-    <img src="" alt="">
-</div>
+<p id="temperature">${weather.Temperature.Imperial.Value + '°F/' + weather.Temperature.Metric.Value + '°C'}</p>
+<p id="forecast_headline">${weather.WeatherText}</p>
+<img id="icon" src="${iconSrc}" alt="">
 `;
 
 //Check if its day or night
 let changeBackgroundColor = null;
     if (weather.IsDayTime) {
-        changeBackgroundColor = 'red';
+        changeBackgroundColor = 'linear-gradient(#87ceeb, white) no-repeat';
     } else {
         changeBackgroundColor = 'linear-gradient(#2b1055, #7597de) no-repeat';
     };
 weatherPic.style.background = changeBackgroundColor;
 
-//Weather icon
-const iconSrc = `SamplePng/${weather.WeatherIcon}.png`;
-icon.setAttribute('src', iconSrc);
+//Remove displayNone class if anything appears
+if (weatherSummary.classList.contains('displayNone')) {
+    weatherSummary.classList.remove('displayNone')
+};
 
 };
