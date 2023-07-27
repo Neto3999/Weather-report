@@ -20,9 +20,10 @@ header {
 }
 
 #day_forecast {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   border: 1px solid gray;
   height: 60vh;
-  width: 30%;
   margin: 0 auto;
   border-radius: 20px;
 }
