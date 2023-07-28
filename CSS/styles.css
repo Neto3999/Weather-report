@@ -10,8 +10,12 @@ body {
   transition: background-color 0.5s ease;
 }
 
+h1 {
+  font-size: 35px;
+}
+
 h2 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 header {
@@ -20,7 +24,7 @@ header {
 }
 
 #day_forecast {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(5, 1fr);
   border: 1px solid gray;
   height: 60vh;
@@ -28,20 +32,19 @@ header {
   border-radius: 20px;
 }
 
-.displayNone {
-  display: none;
-}
-
-#temperature {
+.temperature {
   font-weight: 100;
-  font-size: 50px;
 }
 
-#icon {
+.icon {
   height: 100px;
   width: 150px;
 }
 
-#forecast_headline {
-  font-size: 35px;
+.forecastHeadline, .temperature, .date {
+  font-size: 25px;
+}
+
+#day1, #day2, #day3, #day4 {
+  border-right: solid 1px gray;
 }
