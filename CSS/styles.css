@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -18,6 +18,10 @@ h2 {
   font-size: 30px;
 }
 
+input {
+  width: 20%;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -30,6 +34,10 @@ header {
   height: 60vh;
   margin: 0 auto;
   border-radius: 20px;
+}
+
+#weather_summary {
+  display: none;
 }
 
 .temperature {

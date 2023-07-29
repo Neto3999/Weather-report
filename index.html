@@ -10,9 +10,17 @@
   <body>
     <header>
       <h1>Weather Report</h1>
-      <p>Whats the weather like in your area?</p>
-    </header>
+    <form>
+      <input type="text" name="city" placeholder="What's the weather like in your area?">
+      <button id="get_weather">Check The Weather!</button>
+    </form>
+    </header>    
     <h2 id="city_heading"></h2>
+    <div id="weather_summary" class="displayNone">
+      <p class="temperature"></p>
+      <p class="forecastHeadline"></p>
+      <img class="icon" src="">
+    </div>
     <div id="day_forecast" class="displayNone">
       <div id="day1">
         <p class="date"></p>
@@ -44,11 +52,7 @@
         <p class="forecastHeadline"></p>
         <img class="icon" src="">
       </div>
-    </div>          
-    <form>
-      <input type="text" name="city" placeholder="Get the weather for your city">
-      <button id="get_weather">See Weather</button>
-    </form>
+    </div>
     <script src="JS/5-day-forecast.js"></script>
     <script src="JS/dom-utils.js"></script>
     <script src="JS/ui-display.js"></script>
