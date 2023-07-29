@@ -9,7 +9,7 @@ const apiData = (data) => {
 
     const { cityDetails, weather } = data;
 
-//Formatting the date
+//Formatting the date//
 function formatDate(dateString) {
     const dateObject = new Date(dateString);
     const month = dateObject.getMonth() + 1;
@@ -17,14 +17,14 @@ function formatDate(dateString) {
     return `${month.toString().padStart(2, "0")}/${date.toString().padStart(2, "0")}`;
 };
 
-//Getting the date
+//Getting the date//
 const formattedDate1 = formatDate(weather.DailyForecasts[0].Date);
 const formattedDate2 = formatDate(weather.DailyForecasts[1].Date);
 const formattedDate3 = formatDate(weather.DailyForecasts[2].Date);
 const formattedDate4 = formatDate(weather.DailyForecasts[3].Date);
 const formattedDate5 = formatDate(weather.DailyForecasts[4].Date);
 
-//Getting the day temperature
+//Getting the day temperature//
 const dayTemp1 = weather.DailyForecasts[0].Temperature.Maximum.Value + "° / " + 
 weather.DailyForecasts[0].Temperature.Minimum.Value + "°";
 const dayTemp2 = weather.DailyForecasts[1].Temperature.Maximum.Value + "° / " + 
@@ -36,21 +36,21 @@ weather.DailyForecasts[3].Temperature.Minimum.Value + "°";
 const dayTemp5 = weather.DailyForecasts[4].Temperature.Maximum.Value + "° / " + 
 weather.DailyForecasts[4].Temperature.Minimum.Value + "°";
 
-//Getting the Forecast
+//Getting the Forecast//
 const forecast1 = weather.DailyForecasts[0].Day.IconPhrase;
 const forecast2 = weather.DailyForecasts[1].Day.IconPhrase;
 const forecast3 = weather.DailyForecasts[2].Day.IconPhrase;
 const forecast4 = weather.DailyForecasts[3].Day.IconPhrase;
 const forecast5 = weather.DailyForecasts[4].Day.IconPhrase;
 
-//Weather icon
+//Weather icon//
 const iconSrc1 = `SamplePng/${weather.DailyForecasts[0].Day.Icon}.png`;
 const iconSrc2 = `SamplePng/${weather.DailyForecasts[1].Day.Icon}.png`;
 const iconSrc3 = `SamplePng/${weather.DailyForecasts[2].Day.Icon}.png`;
 const iconSrc4 = `SamplePng/${weather.DailyForecasts[3].Day.Icon}.png`;
 const iconSrc5 = `SamplePng/${weather.DailyForecasts[4].Day.Icon}.png`;
 
-//Rewritten and updated HTML
+//Rewritten and updated HTML//
 cityName.innerHTML = `${cityDetails.EnglishName}`;
 daySummary.innerHTML = `
 <div id="day1">
@@ -85,7 +85,7 @@ daySummary.innerHTML = `
 </div>
 `;
 
-//Check if its day or night, doesnt function for 7 days of the week
+//Check if its day or night, doesnt function for 7 days of the week//
 let changeBackgroundColor = null;
     if (weather.IsDayTime) {
         changeBackgroundColor = 'linear-gradient(#87ceeb, white) no-repeat';
@@ -94,7 +94,7 @@ let changeBackgroundColor = null;
     };
 weatherPic.style.background = changeBackgroundColor;
 
-//Change display to grid if anything appears
+//Change display to grid if anything appears//
 daySummary.style.display = "grid";
 
 };
