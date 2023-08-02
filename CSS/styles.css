@@ -11,15 +11,24 @@ body {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 input {
+  border: solid 2px;
   width: 20%;
+  padding: 5px 10px 5px;
+  border-radius: 10px;
+}
+
+button {
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 9px;
 }
 
 header {
@@ -29,10 +38,10 @@ header {
 
 #day_forecast {
   display: none;
+  row-gap: 10px;
   grid-template-columns: repeat(5, 1fr);
   border: 1px solid gray;
   height: 60vh;
-  margin: 0 auto;
   border-radius: 20px;
 }
 
@@ -46,11 +55,11 @@ header {
 
 .icon {
   height: 100px;
-  width: 150px;
+  width: 175px;
 }
 
 .forecastHeadline, .temperature, .date {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 #day1, #day2, #day3, #day4 {

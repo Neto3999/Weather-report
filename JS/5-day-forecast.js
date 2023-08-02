@@ -1,5 +1,5 @@
 //API KEY//
-const key = '1ulTMdI2OkIdrSZax6S7qB56wOCxKbp6';
+const key = 'ie5qGmATFlKtN1FuIuseITyJgF5TrSH7';
 
 //Current weather forecast//
 const getCurrentWeather = async (id) => {
